@@ -68,8 +68,29 @@ totalNap
 par(las=1,mar=c(5,5,1,1),mgp=c(2,0.5,0),tck=-0.01)
 plot(as.numeric(names(totalNap)),totalNap, type="b",pch=16,xlab="age in days",ylab="Nap time in minutes")
 cor.test(beren4$start_hour,beren4$sleepTime)
-I found a negative correlation between the these two variables
+#I found a negative correlation between the these two variables
 unique(beren3$event)
 
-Question 1: There is not enough data
-question 2: The x axis is too small of a scale and the data is too clumbed to read.
+#Question 1: There is not enough data
+#question 2: The x axis is too small of a scale and the data is too clumbed to read.
+
+Diaper<- which(beren3$event == "bowel")
+Diaperdata <- beren3[Diaper,]
+head(Diaperdata)
+totalFeed
+unique(Diaperdata$age)
+DiaperDays<- unique(Diaperdata$age)
+totalFeed
+totalFeed[as.character(DiaperDays)]
+DiaperDays
+as.character(DiaperDays)
+DiaperDaysNA<- as.character(DiaperDays)
+na.omit(as.data.frame(x))
+DiaperDaysFeeds<- na.omit(as.data.frame(DiaperDaysNA))[,1]
+NoDiaper<- setdiff(names(totalFeed), as.character(DiaperDays))
+NoDiaper
+NoDiaperFeeds<- totalFeed [NoDiaper]
+NoDiaperFeeds
+boxplot(DiaperDaysNA, NoDiaperFeeds)
+t.test(DiaperDaysNA, NoDiaperFeeds)
+
