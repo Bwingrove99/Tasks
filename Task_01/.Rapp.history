@@ -1,64 +1,3 @@
-sys.date()
-Sys.Date()
-mean(c(2, 4, 5))
-submit()
-x
-mean(c(2, 4, 5, NA))
-w
-mean(c(2, 4, 5))
-submit()
-submit(x)
-mean(c(2, 4, 5))
-NA
-mean(c(2, 4, NA))
-my_mean(c(2, 4, 5))
-submit()
-boring_function('My first function!')
-boring_function
-submit()
-my_mean(c(4, 5, 10))
-submit()
-remainder(5)
-remainder(11, 5)
-remainder(divisor = 11, num = 5)
-remainder(4, div = 2)
-args(remainder)
-submit()
-evaluate(c(1.4, 3.6, 7.9, 8.8))
-evaluate(sd, c(1.4, 3.6, 7.9, 8.8))
-evaluate(function(x){x+1}, 6)
-evaluate(sd, c(1.4, 3.6, 7.9, 8.8))
-evaluate(function(x){x[1]}, c(8, 4, 0))
-evaluate(function(x){x[length(x)]}, c(8, 4, 0))
-?paste
-paste("Programming", "is", "fun!")
-submit()
-telegram()
-submit()
-mad_libs(adjective = "", place = "", noun = "")
-submit()
-'I' %p% 'love' %p% 'R!'
-submit()
-'I' %p% 'love' %p% 'R!'
-data(cars)
-?cars
-head()
-head(x)
-head(cars)
-plot(cars)
-?plot()
-?plot
-plot(cars)
-plot(x = cars$speed, y = cars$dist)
-plot(cars)
-plot(x = cars$dist, y = cars$speed)
-plot(x = cars$speed, y = cars$dist, xlab = "Speed")
-plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
-plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
-plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping#
-| Distance")
-plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
-plot(cars, main = "My Plot")
 plot(cars, sub = "My Plot Subtitle")
 plot(cars, col = 2)
 plot(cars, xlim = c(10, 15))
@@ -457,3 +396,83 @@ stats<- simulate(model, nsim = 1)#
 Diversity<- stats$pi#
 Nloci<- length(stats$trees)#
 t1<- read.tree(text=stats$trees[[1]][1])
+install.packages("learnPopGen")#
+library("learnPopGen")#
+install.packages("coala")#
+library("coala")#
+install.packages("phytools")#
+library("phytools")
+model<- coal_model(sample_size = 5, loci_number = 10, loci_length = 500, ploidy = 2) +
+feat_mutation(10) +
+feat_recombination(10) +
+sumstat_trees() +
+sumstat_nucleotide_div()
+stats<- simulate(model, nsim = 1)
+Diversity<- stats$pi
+Nloci<- length(stats$trees)
+t1<- read.tree(text=stats$trees[[1]][1])
+plot(t1)
+axisPhylo()
+Age1 <- max(nodeHeights(t1))
+t2<- read.tree(text=stats$trees[[2]][1])
+plot(t2)
+axisPhylo()
+par(mfrow=c(1,2))
+plot(t1)
+axisPhylo()
+plot(t2)
+axisPhylo()
+t1_1 <- read.tree(text=stats$trees [[1]][1])
+t1_2 <- read.tree(text=stats$trees [[1]][2])
+compare.chronograms(t1, t2)
+compare.cronograms(t1_1, t1_2)
+compare.chronograms(t1_1, t1_2)
+(locus in 1:Nloci) {
+for (locus in 1:Nloci) {
+ntrees <- length(stats$trees[[locus]])
+for (n in 1:ntrees) {
+if (locus == 1 && n == 1) {
+outPhy <- read.tree(text=stats$trees[[locus]][n])
+}
+else {
+outPhy <- ape:::c.phylo(outPhy, read.tree(text=stats$trees[[locus]][n]))
+}
+}
+}
+par(mfrow=c(1,1))
+densityTree(outPhy)
+model3 <- coal_model(10, 50) +
+feat_mutation(par_prior("theta", sample.int(100, 1))) +
+sumstat_nucleotide_div()
+mean_pi <- sapply(stats, function(x) mean(x$pi))
+mean_pi <- sapply(stats, function(x), mean(x$pi))
+stats <- simulate(model3, nsim = 40)
+mean_pi <- sapply(stats, function(x) mean(x$pi))
+theta<- sapply(stats, function(x) x$pars [["theta"]])
+coalescent.plot(n=5, ngen=30, col.order="alternating")#
+test <-coalescent.plot()#
+print(test)#
+plot(test)
+coalescent.plot(n=12, ngen=30, col.order="alternating")#
+test <-coalescent.plot()#
+print(test)#
+plot(test)
+coalescent.plot(n=10, ngen=30, col.order="alternating")#
+test <-coalescent.plot()#
+print(test)#
+plot(test)
+coalescent.plot(n=5, ngen=35, col.order="alternating")#
+test <-coalescent.plot()#
+print(test)#
+plot(test)
+coalescent.plot(n=5, ngen=45, col.order="alternating")#
+test <-coalescent.plot()#
+print(test)#
+plot(test)
+coalescent.plot(n=5, ngen=50, col.order="alternating")
+coalescent.plot(n=5, ngen=49, col.order="alternating")
+coalescent.plot(n=5, ngen=5, col.order="alternating")
+#49 begins fixation at 10
+#5 offspring
+#Large impact because each simulation was different
+#In generation 0
