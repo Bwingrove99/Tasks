@@ -288,3 +288,6 @@ coalescent.plot(n=5, ngen=5, col.order="alternating")
 #5 offspring
 #Large impact because each simulation was different
 #In generation 0
+
+#I hypothesis that female seal pups will weigh more than the male seal pups
+x<- read.table(" ~/Evolution/Tasks/Project")
