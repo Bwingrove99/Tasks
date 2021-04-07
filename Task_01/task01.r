@@ -366,3 +366,193 @@ fit.bd(AnolisTree, rho = 0.2)
 install.packages('treebase')
 library('treebase')
 library('ape')
+Warblers <- search_treebase("Basileuterus", by="taxon", max_trees=20)
+length(Warblers)
+pdf("r07-WarblerPhylo.pdf", height=5, width=5)
+WarblersPlot <- plot.phylo(Warblers[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Warblers, function(x) try(is.ultrametric(x)))
+WillWork
+bdwarblers <- fit.bd(Warblers[[1]], rho=0.2)
+bdwarblers
+b=15.4316 d=8.0977
+Skinks <- search_treebase("Dasia", by="taxon", max_trees=20)
+length(Skinks)
+pdf("r07-SkinksPhylo.pdf", height=5, width=5)
+SkinksPlot <- plot.phylo(Skinks[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Skinks, function(x) try(is.ultrametric(x)))
+WillWor
+bdskinks <- fit.bd(Warblers[[1]], rho=0.2)
+bdskinks
+b=15.4316 d=8.0977
+TreeFrogs <- search_treebase("Hyla", by="taxon", max_trees=20)
+length(TreeFrogs)
+pdf("r07-TreeFrogsPhylo.pdf", height=5, width=5)
+TreeFrogsPlot <- plot.phylo(TreeFrogs[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(TreeFrogs, function(x) try(is.ultrametric(x)))
+WillWork
+bdTreeFrogs <- fit.bd(TreeFrogs[[1]], rho=0.2)
+bdTreeFrogs
+Skinks <- search_treebase("Dasia", by="taxon", max_trees=20)
+length(Skinks)
+pdf("r07-SkinksPhylo.pdf", height=5, width=5)
+SkinksPlot <- plot.phylo(Skinks[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Skinks, function(x) try(is.ultrametric(x)))
+WillWork
+bdskinks <- fit.bd(Warblers[[1]], rho=0.2)
+bdskinks
+install.packages("treebase")
+library("treebase")
+library("ape")
+Elephants <- search_treebase("Elephas", by="taxon", max_trees=20)
+length(Elephants)
+pdf("r07-WarblerPhylo.pdf", height=5, width=5)
+ElephantsPlot <- plot.phylo(Elephants[[1]], cex=0.35
+dev.off()
+WillWork <- sapply(Elephants, function(x) try(is.ultrametric(x)))
+WillWork
+bdElephants <- fit.bd(Elephants[[1]], rho=0.2)
+bdElephants
+Warblers <- search_treebase("Basileuterus", by="taxon", max_trees=20)
+length(Warblers)
+pdf("r07-WarblerPhylo.pdf", height=5, width=5)
+WarblersPlot <- plot.phylo(Warblers[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Warblers, function(x) try(is.ultrametric(x)))
+WillWork
+bdwarblers <- fit.bd(Warblers[[1]], rho=0.2)
+bdwarblers
+b=15.4316 d=8.0977
+Elephants <- search_treebase("Elephas", by="taxon", max_trees=20)
+length(Elephants)
+pdf("r07-ElephantPhylo.pdf", height=5, width=5)
+ElephantsPlot <- plot.phylo(Elephants[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Elephants, function(x) try(is.ultrametric(x)))
+WillWork
+bdElephants <- fit.bd(Elephants[[1]], rho=0.2)
+bdElephants
+pdf("r07-ElephantPhylo.pdf", height=5, width=5)
+Monkeys <- search_treebase("Guenon", by="taxon", max_trees=20)
+length(Monkeys)
+pdf("r07-MonkeysPhylo.pdf", height=5, width=5)
+MonkeysPlot <- plot.phylo(Monkeys[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Monkeys, function(x) try(is.ultrametric(x)))
+WillWork
+bdMonkeys <- fit.bd(Monkeys[[1]], rho=0.2)
+bdMonkeys
+Primates <- search_treebase("Cheirogaleus", by="taxon", max_trees=20)
+length(Primates)
+pdf("r07-PrimatesPhylo.pdf", height=5, width=5)
+PrimatesPlot <- plot.phylo(Primates[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Primates, function(x) try(is.ultrametric(x)))
+WillWork
+bdPrimates <- fit.bd(Primates[[1]], rho=0.2)
+bdPrimates
+Tigers <- search_treebase("Tigris", by="taxon", max_trees=20)
+length(Tigers)
+pdf("r07-TigersPhylo.pdf", height=5, width=5)
+TigersPlot <- plot.phylo(Tigers[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Tigers, function(x) try(is.ultrametric(x)))
+WillWork
+bdTigers <- fit.bd(Tigers[[1]], rho=0.2)
+bdTigers
+Tigers <- search_treebase("Tigris", by="taxon", max_trees=20)
+length(Tigers)
+pdf("r07-TigersPhylo.pdf", height=5, width=5)
+TigersPlot <- plot.phylo(Tigers[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Tigers, function(x) try(force.ultrametric(x)))
+WillWork
+bdTigers <- fit.bd(Tigers[[1]], rho=0.2)
+bdTigers
+Lions <- search_treebase("Panthera", by="taxon", max_trees=20)
+length(Lions)
+pdf("r07-LionsPhylo.pdf", height=5, width=5)
+LionsPlot <- plot.phylo(Lions[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Lions, function(x) try(is.ultrametric(x)))
+WillWork
+bdLions <- fit.bd(Lions[[1]], rho=0.2)
+bdLions
+Chickens <- search_treebase("Junglefowl", by="taxon", max_trees=20)
+length(Chickens)
+pdf("r07-ChickensPhylo.pdf", height=5, width=5)
+ChickensPlot <- plot.phylo(Chickens[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Chickens, function(x) try(is.ultrametric(x)))
+WillWork
+bdChickens <- fit.bd(Chickens[[1]], rho=0.2)
+bdChickens
+Dogs <- search_treebase("Canus", by="taxon", max_trees=20)
+length(Dogs)
+pdf("r07-DogsPhylo.pdf", height=5, width=5)
+DogsPlot <- plot.phylo(Dogs[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Dogs, function(x) try(is.ultrametric(x)))
+WillWork
+bdDogs <- fit.bd(Dogs[[1]], rho=0.2)
+bdDogs
+Pandas <- search_treebase("Panthera", by="taxon", max_trees=20)
+length(Pandas)
+pdf("r07-PandasPhylo.pdf", height=5, width=5)
+PandasPlot <- plot.phylo(Pandas[[1]], cex=0.35)
+dev.off()
+WillWork <- sapply(Pandas, function(x) try(is.ultrametric(x)))
+WillWork
+bdPandas <- fit.bd(Pandas[[1]], rho=0.2)
+bdPandas
+
+setwd("~/Desktop/Evolution/Tasks/Task_08")
+library("phytools")
+ tree <-read.tree("https://jonsmitchell.com/data/anolis.tre")
+ plot(tree, type="fan")
+data <- read.csv("https://jonsmitchell.com/data/svl.csv", stringsAsFactors=F, row.names=1)
+ dim(data)
+class(data)
+ svl <- setNames(data$svl, rownames(data))
+svl
+ Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+par(mar=c(0.1,0.1,0.1,0.1))
+ plot(tree, type="fan", lwd=2, show.tip.label=F)
+ tiplabels(pch=16, cex=0.25*svl[tree$tip.label])
+ # it adds the ancestral states 
+ nodelabels(pch=16, cex=0.25*Ancestors$ace)
+ obj <- contMap(tree, svl, plot=F)
+ plot (obj, type="fan", legend= 0.7*max(nodeHeights(tree)), sig=2, fsize=c(0.7, 0.9))
+ fossilData <- data.frame(svl=log(c(25.4, 23.2, 17.7, 19.7, 24, 31)), tip1=c("Anolis_aliniger", "Anolis_aliniger", "Anolis_occultus", "Anolis_ricordii", "Anolis_cristatellus", "Anolis_occultus"), tip2=c("Anolis_chlorocyanus", "Anolis_coelestinus", "Anolis_hendersoni", "Anolis_cybotes", "Anolis_angusticeps", "Anolis_angusticeps"))
+ fossilNodes <-c()
+nodeN <-c()
+{
+for (i in 1:nrow(fossilData))
+i <- 1
+ if (i == 1) {
+print(Ancestors)
+}
+plot(tree, cex=0.5)
+for (i in 1:nrow(fossilData))	{
+Node <- fastMRCA(tree, fossilData [i,"tip1"], fossilData[i,"tip2"])
+	fossilNodes[i] <- fossilData[i, "svl"]
+ 	nodeN[i] <- Node
+ 	nodelabels(node=Node, pch=21, bg="red", cex=1.2)
+ }
+names(fossilNodes) <- nodeN
+ Ancestors_withFossils <- fastAnc(tree, svl, anc.states=fossilNodes, CI=TRUE, var=TRUE)
+install.packages("geiger")
+# 1: 1:82 tips
+#2: 100 demensions; 1st of species
+#3: in the tips of the tree, or "x" (svl); CI95 can compute 95% confidence intervals on ancestral state estimates
+#4: the function contrasts the state is at the root each time
+#7:increases ancestral state
+# 8-10:
+library("geiger")
+?fitContinuous
+fitContinuous(tree, svl, model='EB')
+fitContinuous(tree, svl, model='OU')
+fitContinuous(tree, svl, model='BM')
